@@ -4,6 +4,6 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   server: {
-    allowedHosts: ["*.csb.app"] // allow all Codesandbox subdomains
+    allowedHosts: ["gkkr3x-5173.csb.app"] // allow all Codesandbox subdomains
   }
 });
