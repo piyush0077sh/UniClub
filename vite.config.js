@@ -1,9 +1,11 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
   server: {
-    allowedHosts: ["gkkr3x-5173.csb.app"] // allow all Codesandbox subdomains
+    allowedHosts: [
+      'tc78pq-5173.csb.app'  // 👈 add the sandbox host shown in your error
+    ]
   }
-});
+})
