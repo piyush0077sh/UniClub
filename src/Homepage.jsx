@@ -1,98 +1,91 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Users, MessageSquare, ClipboardCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import { FaMapMarkedAlt, FaComments, FaChalkboardTeacher, FaUsers } from "react-icons/fa";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-b from-indigo-600 to-purple-700 text-white font-sans">
       {/* Navbar */}
-      <nav className="flex justify-between items-center px-8 py-4 shadow bg-white sticky top-0 z-50">
-        <h1 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
-          CampusConnect 🚀
-        </h1>
-        <div className="space-x-4 hidden md:flex">
-          <Button variant="ghost">Home</Button>
-          <Button variant="ghost">Guide</Button>
-          <Button variant="ghost">Mapping</Button>
-          <Button variant="ghost">Assessments</Button>
-          <Button variant="ghost">Chat</Button>
-        </div>
-        <Button className="bg-blue-600 text-white rounded-xl px-5 py-2 hover:bg-blue-700 transition">Sign In</Button>
+      <nav className="flex justify-between items-center px-8 py-4 bg-black/20 backdrop-blur-md sticky top-0">
+        <h1 className="text-2xl font-extrabold tracking-wider">UniClub 🎓</h1>
+        <ul className="flex gap-6 text-lg font-medium">
+          <li className="hover:text-yellow-300 cursor-pointer">Guide</li>
+          <li className="hover:text-yellow-300 cursor-pointer">Map</li>
+          <li className="hover:text-yellow-300 cursor-pointer">Classes</li>
+          <li className="hover:text-yellow-300 cursor-pointer">Chat</li>
+        </ul>
       </nav>
 
       {/* Hero Section */}
-      <section className="text-center py-20 px-6 bg-gradient-to-r from-blue-500 to-indigo-600 text-white relative overflow-hidden">
+      <section className="flex flex-col items-center justify-center text-center py-20 px-6">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-5xl font-extrabold mb-6 drop-shadow-lg"
+          transition={{ duration: 0.7 }}
+          className="text-5xl sm:text-6xl font-extrabold leading-tight mb-4"
         >
-          Your Campus. Your Space. 🌐
+          Welcome to <span className="text-yellow-300">UniClub</span>
         </motion.h2>
-        <p className="max-w-2xl mx-auto text-lg mb-6 opacity-90">
-          Maps, live classes, real-time assessments & vibes with your college fam — all in one app.
+        <p className="text-lg sm:text-xl max-w-2xl text-gray-200 mb-8">
+          Your all-in-one college buddy 🏫 — explore the campus, stay connected, 
+          ace your classes, and vibe with your community.
         </p>
-        <Button className="bg-white text-blue-600 font-bold px-8 py-4 rounded-2xl shadow-xl hover:scale-105 transition-transform">
-          Let’s Go 👉
-        </Button>
+        <button className="px-6 py-3 bg-yellow-400 text-black font-semibold text-lg rounded-xl shadow-md hover:scale-105 transition-transform">
+          🚀 Get Started
+        </button>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <Card className="shadow-xl rounded-3xl hover:scale-105 transition-transform bg-white/80 backdrop-blur-md">
-          <CardContent className="p-6 text-center">
-            <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-4 animate-bounce" />
-            <h3 className="font-bold text-xl mb-2">Campus Mapping</h3>
-            <p className="text-gray-600">Find every corner of your campus with interactive maps. Never be late again! ⏱️</p>
-          </CardContent>
-        </Card>
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-10 py-16">
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          className="bg-white/10 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center"
+        >
+          <FaMapMarkedAlt size={50} className="mb-4 text-yellow-300" />
+          <h3 className="text-2xl font-bold mb-2">Campus Map</h3>
+          <p className="text-gray-200">
+            Find buildings, hangout spots, and navigate your campus with ease.
+          </p>
+        </motion.div>
 
-        <Card className="shadow-xl rounded-3xl hover:scale-105 transition-transform bg-white/80 backdrop-blur-md">
-          <CardContent className="p-6 text-center">
-            <ClipboardCheck className="w-12 h-12 text-green-600 mx-auto mb-4 animate-pulse" />
-            <h3 className="font-bold text-xl mb-2">Live Assessments</h3>
-            <p className="text-gray-600">Take quizzes, polls & class tests instantly. Results? Real-time. ⚡</p>
-          </CardContent>
-        </Card>
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          className="bg-white/10 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center"
+        >
+          <FaChalkboardTeacher size={50} className="mb-4 text-yellow-300" />
+          <h3 className="text-2xl font-bold mb-2">Live Classes</h3>
+          <p className="text-gray-200">
+            Get assessments, updates, and interactive class sessions in real time.
+          </p>
+        </motion.div>
 
-        <Card className="shadow-xl rounded-3xl hover:scale-105 transition-transform bg-white/80 backdrop-blur-md">
-          <CardContent className="p-6 text-center">
-            <MessageSquare className="w-12 h-12 text-purple-600 mx-auto mb-4 animate-pulse" />
-            <h3 className="font-bold text-xl mb-2">Campus Chat</h3>
-            <p className="text-gray-600">Slide into convos with classmates, form study squads & share memes. 💬</p>
-          </CardContent>
-        </Card>
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          className="bg-white/10 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center"
+        >
+          <FaComments size={50} className="mb-4 text-yellow-300" />
+          <h3 className="text-2xl font-bold mb-2">Campus Chat</h3>
+          <p className="text-gray-200">
+            Connect with classmates, ask doubts, or just vibe together. 🔥
+          </p>
+        </motion.div>
 
-        <Card className="shadow-xl rounded-3xl hover:scale-105 transition-transform bg-white/80 backdrop-blur-md">
-          <CardContent className="p-6 text-center">
-            <Users className="w-12 h-12 text-orange-600 mx-auto mb-4 animate-bounce" />
-            <h3 className="font-bold text-xl mb-2">Community Guide</h3>
-            <p className="text-gray-600">Events, fest alerts & insider hacks to rock your campus journey. 🎉</p>
-          </CardContent>
-        </Card>
-      </section>
-
-      {/* Interactive Map Preview */}
-      <section className="py-16 px-6 text-center">
-        <h2 className="text-3xl font-extrabold text-blue-700 mb-6">Explore Your Campus Map 🗺️</h2>
-        <div className="w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-200">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509371!2d144.95592831590482!3d-37.81720974201426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d5fa2a0b8f0!2sUniversity!5e0!3m2!1sen!2sau!4v1614069468894!5m2!1sen!2sau"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-          ></iframe>
-        </div>
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          className="bg-white/10 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center"
+        >
+          <FaUsers size={50} className="mb-4 text-yellow-300" />
+          <h3 className="text-2xl font-bold mb-2">Community</h3>
+          <p className="text-gray-200">
+            Join clubs, events, and discover people who share your interests. 🌍
+          </p>
+        </motion.div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 text-center py-6 mt-12">
-        <p>⚡ Built for students, by students | © {new Date().getFullYear()} CampusConnect</p>
+      <footer className="bg-black/20 text-gray-300 text-center py-6 mt-16">
+        <p>© {new Date().getFullYear()} UniClub. Built for Students, by Students 💡</p>
       </footer>
     </div>
   );
 }
+ 
