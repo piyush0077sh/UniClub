@@ -61,7 +61,7 @@ function App() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex justify-between items-center h-16">
             <motion.div 
               className="flex items-center space-x-2"
@@ -74,7 +74,7 @@ function App() {
             </motion.div>
             
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
+            <nav className="hidden lg:flex space-x-8">
               <a href="#home" className="text-gray-700 hover:text-indigo-600 transition-colors duration-200">Home</a>
               <a href="#clubs" className="text-gray-700 hover:text-indigo-600 transition-colors duration-200">Clubs</a>
               <a href="#events" className="text-gray-700 hover:text-indigo-600 transition-colors duration-200">Events</a>
@@ -82,14 +82,14 @@ function App() {
             </nav>
             {/* Mobile nav button */}
             <button 
-              className="md:hidden text-gray-700 hover:text-indigo-600 transition-colors duration-200"
+              className="lg:hidden text-gray-700 hover:text-indigo-600 transition-colors duration-200"
               aria-label="Open navigation menu"
               onClick={() => setMobileNavOpen(!mobileNavOpen)}
             >
               <FaBars className="text-2xl" />
             </button>
             <motion.div 
-              className="hidden md:flex space-x-4"
+              className="hidden lg:flex space-x-4"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -103,7 +103,7 @@ function App() {
         </div>
         {/* Mobile Navigation Dropdown */}
         {mobileNavOpen && (
-          <div className="md:hidden bg-white shadow-lg">
+          <div className="lg:hidden bg-white shadow-lg">
             <nav className="flex flex-col items-start px-4 py-2 space-y-2">
               <a href="#home" className="text-gray-700 hover:text-indigo-600 w-full py-2" onClick={() => setMobileNavOpen(false)}>Home</a>
               <a href="#clubs" className="text-gray-700 hover:text-indigo-600 w-full py-2" onClick={() => setMobileNavOpen(false)}>Clubs</a>
@@ -120,10 +120,10 @@ function App() {
 
       {/* Hero Section */}
       <section id="home" className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-center">
             <motion.h1 
-              className="text-5xl md:text-6xl font-bold mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -132,7 +132,7 @@ function App() {
             </motion.h1>
             
             <motion.p 
-              className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto"
+              className="text-lg sm:text-xl lg:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto px-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -142,18 +142,18 @@ function App() {
             </motion.p>
             
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center px-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <a href="#clubs">
-                <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                <button className="w-full sm:w-auto bg-white text-indigo-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg">
                   Explore Clubs
                 </button>
               </a>
               <a href="#clubs">
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-200 transform hover:scale-105">
+                <button className="w-full sm:w-auto border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-200 transform hover:scale-105">
                   Create a Club
                 </button>
               </a>
@@ -164,8 +164,8 @@ function App() {
 
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             <motion.div 
               className="text-center"
               initial={{ opacity: 0, y: 20 }}
@@ -173,8 +173,8 @@ function App() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="text-4xl font-bold text-indigo-600 mb-2">500+</div>
-              <div className="text-gray-600">Active Clubs</div>
+              <div className="text-3xl sm:text-4xl font-bold text-indigo-600 mb-2">500+</div>
+              <div className="text-sm sm:text-base text-gray-600">Active Clubs</div>
             </motion.div>
             
             <motion.div 
@@ -184,8 +184,8 @@ function App() {
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="text-4xl font-bold text-indigo-600 mb-2">25K+</div>
-              <div className="text-gray-600">Students Connected</div>
+              <div className="text-3xl sm:text-4xl font-bold text-indigo-600 mb-2">25K+</div>
+              <div className="text-sm sm:text-base text-gray-600">Students Connected</div>
             </motion.div>
             
             <motion.div 
@@ -195,8 +195,8 @@ function App() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="text-4xl font-bold text-indigo-600 mb-2">1000+</div>
-              <div className="text-gray-600">Events This Year</div>
+              <div className="text-3xl sm:text-4xl font-bold text-indigo-600 mb-2">1000+</div>
+              <div className="text-sm sm:text-base text-gray-600">Events This Year</div>
             </motion.div>
           </div>
         </div>
@@ -204,7 +204,7 @@ function App() {
 
       {/* Featured Clubs */}
       <section id="clubs" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -212,13 +212,13 @@ function App() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Clubs</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Featured Clubs</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
               Discover amazing communities that match your interests and help you grow
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {clubs.map((club, index) => (
               <motion.div 
                 key={club.id}
@@ -245,9 +245,9 @@ function App() {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{club.name}</h3>
                   <div className="flex items-center text-gray-600 mb-4">
                     <FaUsers className="mr-2" aria-label="club members" />
-                    <span>{club.members} members</span>
+                    <span className="text-sm sm:text-base">{club.members} members</span>
                   </div>
-                  <button className="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-200 flex items-center justify-center">
+                  <button className="w-full bg-indigo-600 text-white py-2 sm:py-3 rounded-lg hover:bg-indigo-700 transition-colors duration-200 flex items-center justify-center text-sm sm:text-base">
                     Join Club <FaArrowRight className="ml-2" />
                   </button>
                 </div>
@@ -259,7 +259,7 @@ function App() {
 
       {/* Upcoming Events */}
       <section id="events" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -267,13 +267,13 @@ function App() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
               Don't miss out on exciting events happening across campus
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {events.map((event, index) => (
               <motion.div 
                 key={event.id}
@@ -285,12 +285,12 @@ function App() {
               >
                 <div className="flex items-center mb-4">
                   <FaCalendarAlt className="text-indigo-600 mr-3" aria-label="calendar" />
-                  <span className="text-sm text-gray-600">{event.date}</span>
+                  <span className="text-xs sm:text-sm text-gray-600">{event.date}</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{event.title}</h3>
-                <p className="text-gray-600 mb-2">{event.time}</p>
-                <p className="text-gray-600 mb-4">{event.location}</p>
-                <button className="text-indigo-600 font-medium hover:text-indigo-700 transition-colors duration-200">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{event.title}</h3>
+                <p className="text-sm sm:text-base text-gray-600 mb-2">{event.time}</p>
+                <p className="text-sm sm:text-base text-gray-600 mb-4">{event.location}</p>
+                <button className="text-sm sm:text-base text-indigo-600 font-medium hover:text-indigo-700 transition-colors duration-200">
                   Learn More →
                 </button>
               </motion.div>
@@ -301,9 +301,9 @@ function App() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white" id="about">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 xl:px-12">
           <motion.h2 
-            className="text-4xl font-bold mb-6"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -312,7 +312,7 @@ function App() {
             Ready to Start Your Journey?
           </motion.h2>
           <motion.p 
-            className="text-xl mb-8 text-indigo-100"
+            className="text-lg sm:text-xl mb-8 text-indigo-100 px-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -336,21 +336,21 @@ function App() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <FaGraduationCap className="text-2xl text-indigo-400" />
                 <span className="text-xl font-bold">UniClub</span>
               </div>
-              <p className="text-gray-400">
+              <p className="text-sm sm:text-base text-gray-400">
                 Connecting university students through meaningful club experiences.
               </p>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-gray-400">
+              <h3 className="text-base sm:text-lg font-semibold mb-4">Quick Links</h3>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-400">
                 <li><a href="#clubs" className="hover:text-white transition-colors duration-200">Browse Clubs</a></li>
                 <li><a href="#clubs" className="hover:text-white transition-colors duration-200">Create Club</a></li>
                 <li><a href="#events" className="hover:text-white transition-colors duration-200">Events</a></li>
@@ -359,8 +359,8 @@ function App() {
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold mb-4">Categories</h3>
-              <ul className="space-y-2 text-gray-400">
+              <h3 className="text-base sm:text-lg font-semibold mb-4">Categories</h3>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-400">
                 <li><a href="#clubs" className="hover:text-white transition-colors duration-200">Technology</a></li>
                 <li><a href="#clubs" className="hover:text-white transition-colors duration-200">Arts & Culture</a></li>
                 <li><a href="#clubs" className="hover:text-white transition-colors duration-200">Sports</a></li>
@@ -369,7 +369,7 @@ function App() {
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+              <h3 className="text-base sm:text-lg font-semibold mb-4">Follow Us</h3>
               <div className="flex space-x-4">
                 <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                   <FaFacebook className="text-2xl text-gray-400 hover:text-white cursor-pointer transition-colors duration-200" />
@@ -384,7 +384,7 @@ function App() {
             </div>
           </div>
           
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm sm:text-base text-gray-400">
             <p>&copy; 2025 UniClub. All rights reserved.</p>
           </div>
         </div>
