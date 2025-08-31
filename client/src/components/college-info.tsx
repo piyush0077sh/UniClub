@@ -9,7 +9,7 @@ export default function CollegeInfo() {
 
   if (isLoading) {
     return (
-      <div className="bg-card rounded-xl shadow-sm border border-border p-6 hover-lift">
+      <div className="bg-card rounded-xl shadow-sm border border-border p-6 hover-lift premium-shadow">
         <div className="animate-pulse">
           <div className="h-6 bg-muted rounded w-1/3 mb-4"></div>
           <div className="space-y-4">
@@ -58,7 +58,7 @@ export default function CollegeInfo() {
   };
 
   return (
-    <div className="bg-card rounded-xl shadow-sm border border-border p-6 hover-lift">
+    <div className="bg-card rounded-xl shadow-sm border border-border p-6 hover-lift premium-shadow">
       <h3 className="font-heading text-lg font-semibold text-foreground mb-4" data-testid="text-college-updates-title">
         College Updates
       </h3>
@@ -80,7 +80,7 @@ export default function CollegeInfo() {
               {announcement.content}
             </p>
             <span className="text-xs text-muted-foreground" data-testid={`text-announcement-time-${index}`}>
-              {getTimeAgo(announcement.createdAt)}
+              {getTimeAgo(announcement.createdAt || undefined)}
             </span>
           </div>
         ))}

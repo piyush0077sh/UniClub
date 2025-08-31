@@ -8,7 +8,7 @@ export default function CampusGuide() {
 
   if (isLoading) {
     return (
-      <div className="bg-card rounded-xl shadow-sm border border-border p-6 hover-lift">
+      <div className="bg-card rounded-xl shadow-sm border border-border p-6 hover-lift premium-shadow">
         <div className="animate-pulse">
           <div className="h-6 bg-muted rounded w-1/3 mb-4"></div>
           <div className="h-48 bg-muted rounded"></div>
@@ -18,7 +18,7 @@ export default function CampusGuide() {
   }
 
   return (
-    <div className="bg-card rounded-xl shadow-sm border border-border p-6 hover-lift">
+    <div className="bg-card rounded-xl shadow-sm border border-border p-6 hover-lift premium-shadow">
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-heading text-xl font-semibold text-foreground" data-testid="text-campus-guide-title">
           Campus Guide
@@ -54,7 +54,7 @@ export default function CampusGuide() {
                 'bg-accent'
               }`}></div>
               <span className="text-sm">
-                {index === 0 && "Next Class: Biology Lab - "}
+                {index === 0 && "Next Class: Chemistry Lab - "}
                 {index === 1 && "Dining: "}
                 {index === 2 && "Library: "}
                 {location.name} - {location.hours}
@@ -62,10 +62,10 @@ export default function CampusGuide() {
             </div>
           ))}
           <button 
-            className="w-full mt-4 bg-primary text-primary-foreground py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors font-medium"
+            className="w-full mt-4 gradient-primary text-primary-foreground py-2 px-4 rounded-lg hover:opacity-90 transition-opacity font-medium"
             data-testid="button-get-directions"
           >
-            Get Directions
+            Navigate Campus
           </button>
         </div>
       </div>

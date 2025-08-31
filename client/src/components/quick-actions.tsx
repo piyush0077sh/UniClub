@@ -9,7 +9,7 @@ export default function QuickActions() {
   ];
 
   return (
-    <div className="bg-card rounded-xl shadow-sm border border-border p-6">
+    <div className="bg-card rounded-xl shadow-sm border border-border p-6 premium-shadow">
       <h3 className="font-heading text-lg font-semibold text-foreground mb-4" data-testid="text-quick-actions-title">
         Quick Actions
       </h3>
@@ -18,7 +18,7 @@ export default function QuickActions() {
         {actions.map((action, index) => (
           <button 
             key={action.label}
-            className="flex flex-col items-center p-4 bg-muted/50 rounded-lg hover:bg-muted transition-colors text-center"
+            className="flex flex-col items-center p-4 bg-muted/50 rounded-lg hover:bg-primary/10 transition-colors text-center"
             data-testid={`button-quick-action-${action.label.toLowerCase()}`}
           >
             <action.icon className={`h-6 w-6 ${action.color} mb-2`} />

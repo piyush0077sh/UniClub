@@ -8,7 +8,7 @@ export default function LiveAssessments() {
 
   if (isLoading) {
     return (
-      <div className="bg-card rounded-xl shadow-sm border border-border p-6 hover-lift">
+      <div className="bg-card rounded-xl shadow-sm border border-border p-6 hover-lift premium-shadow">
         <div className="animate-pulse">
           <div className="h-6 bg-muted rounded w-1/3 mb-6"></div>
           <div className="space-y-4">
@@ -26,7 +26,7 @@ export default function LiveAssessments() {
   const gradedAssessments = assessments?.filter(a => a.status === "graded") || [];
 
   return (
-    <div className="bg-card rounded-xl shadow-sm border border-border p-6 hover-lift">
+    <div className="bg-card rounded-xl shadow-sm border border-border p-6 hover-lift premium-shadow">
       <div className="flex items-center justify-between mb-6">
         <h3 className="font-heading text-xl font-semibold text-foreground" data-testid="text-assessments-title">
           Live Assessments

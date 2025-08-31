@@ -5,26 +5,26 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(210, 40%, 98%);
-  --foreground: hsl(222, 84%, 20%);
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(222, 84%, 20%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(222, 84%, 20%);
-  --primary: hsl(221, 83%, 53%);
+  --background: linear-gradient(135deg, hsl(210, 40%, 98%) 0%, hsl(214, 100%, 97%) 100%);
+  --foreground: hsl(222, 84%, 5%);
+  --card: hsla(0, 0%, 100%, 0.9);
+  --card-foreground: hsl(215, 25%, 27%);
+  --popover: hsla(0, 0%, 100%, 0.95);
+  --popover-foreground: hsl(215, 25%, 27%);
+  --primary: linear-gradient(135deg, hsl(221, 83%, 53%) 0%, hsl(234, 89%, 54%) 100%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(162, 77%, 39%);
+  --secondary: linear-gradient(135deg, hsl(266, 92%, 66%) 0%, hsl(327, 73%, 67%) 100%);
   --secondary-foreground: hsl(0, 0%, 100%);
-  --muted: hsl(210, 40%, 96%);
-  --muted-foreground: hsl(215, 16%, 47%);
-  --accent: hsl(262, 74%, 58%);
+  --muted: hsl(214, 100%, 97%);
+  --muted-foreground: hsl(215, 19%, 35%);
+  --accent: hsl(266, 92%, 66%);
   --accent-foreground: hsl(0, 0%, 100%);
-  --highlight: hsl(38, 92%, 50%);
+  --highlight: hsl(221, 83%, 53%);
   --highlight-foreground: hsl(0, 0%, 100%);
   --destructive: hsl(356.3033, 90.5579%, 54.3137%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --border: hsl(214, 32%, 91%);
-  --input: hsl(214, 32%, 91%);
+  --border: hsl(214, 27%, 84%);
+  --input: hsl(214, 27%, 84%);
   --ring: hsl(221, 83%, 53%);
   --chart-1: hsl(203.8863, 88.2845%, 53.1373%);
   --chart-2: hsl(159.7826, 100%, 36.0784%);
@@ -98,7 +98,8 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased text-foreground;
+    background: linear-gradient(135deg, hsl(210, 40%, 98%) 0%, hsl(214, 100%, 97%) 100%);
   }
 }
 
@@ -108,11 +109,38 @@
 
 .hover-lift:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.12), 0 10px 20px rgba(37, 99, 235, 0.08);
 }
 
 .notification-dot {
   animation: pulse 2s infinite;
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, hsl(221, 83%, 53%) 0%, hsl(234, 89%, 54%) 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, hsl(266, 92%, 66%) 0%, hsl(327, 73%, 67%) 100%);
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, hsl(210, 40%, 98%) 0%, hsl(214, 100%, 97%) 100%);
+}
+
+.premium-shadow {
+  box-shadow: 
+    0 1px 3px rgba(37, 99, 235, 0.05),
+    0 4px 12px rgba(37, 99, 235, 0.08),
+    0 16px 32px rgba(37, 99, 235, 0.12);
+}
+
+.claude-logo {
+  background: linear-gradient(135deg, hsl(221, 83%, 53%) 0%, hsl(234, 89%, 54%) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
 }
 
 @keyframes pulse {

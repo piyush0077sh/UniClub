@@ -46,7 +46,11 @@ export const messages = pgTable("messages", {
   recipientId: varchar("recipient_id").references(() => users.id),
   groupName: text("group_name"),
   content: text("content").notNull(),
-  type: text("type").default("direct"), // direct, group
+  type: text("type").default("direct"), // direct, group, channel
+  channel: text("channel"), // academic, social, announcements, study-groups
+  upvotes: integer("upvotes").default(0),
+  isAdmin: boolean("is_admin").default(false),
+  isPinned: boolean("is_pinned").default(false),
   isRead: boolean("is_read").default(false),
   createdAt: timestamp("created_at").defaultNow(),
 });

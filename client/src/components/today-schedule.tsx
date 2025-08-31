@@ -40,9 +40,9 @@ export default function TodaySchedule() {
     },
     {
       course: null,
-      title: "Biology Study Group",
-      room: "Library Study Room B",
-      instructor: "5 participants",
+      title: "Evening College Classes",
+      room: "Academic Block C",
+      instructor: "Multiple faculty",
       time: "3:00 PM - 5:00 PM",
       status: "study",
       bgClass: "border-border",
@@ -52,9 +52,9 @@ export default function TodaySchedule() {
   ];
 
   return (
-    <div className="mt-8 bg-card rounded-xl shadow-sm border border-border p-6">
+    <div className="mt-8 bg-card rounded-xl shadow-sm border border-border p-6 premium-shadow">
       <h3 className="font-heading text-xl font-semibold text-foreground mb-6" data-testid="text-schedule-title">
-        Today's Schedule
+        Today's Schedule - Motilal Nehru College
       </h3>
       
       <div className="grid md:grid-cols-3 gap-6">
