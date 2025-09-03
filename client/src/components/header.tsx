@@ -8,8 +8,8 @@ export default function Header() {
           {/* Logo and Brand */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <h1 className="font-heading text-2xl font-bold claude-logo premium-shadow" data-testid="logo-campushub">
-                CampusHub DU
+              <h1 className="font-heading text-2xl font-bold claude-logo premium-shadow" data-testid="logo-uniclub">
+                UniClub
               </h1>
               <span className="text-xs text-muted-foreground ml-2">Motilal Nehru College</span>
             </div>

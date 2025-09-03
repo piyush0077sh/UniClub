@@ -54,7 +54,7 @@ export default function TodaySchedule() {
   return (
     <div className="mt-8 bg-card rounded-xl shadow-sm border border-border p-6 premium-shadow">
       <h3 className="font-heading text-xl font-semibold text-foreground mb-6" data-testid="text-schedule-title">
-        Today's Schedule - Motilal Nehru College
+        Today's Schedule - UniClub
       </h3>
       
       <div className="grid md:grid-cols-3 gap-6">

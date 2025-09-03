@@ -1,7 +1,7 @@
-# CampusHub Student Dashboard
+# UniClub Student Dashboard
 
 ## Overview
-CampusHub is a comprehensive student dashboard application that provides a centralized platform for managing campus life. The application offers real-time access to course information, assessments, messaging, campus navigation, and announcements. Built as a full-stack web application, it serves as a one-stop solution for students to stay organized and connected with their academic environment.
+UniClub is a comprehensive student dashboard application that provides a centralized platform for managing campus life. The application offers real-time access to course information, assessments, messaging, campus navigation, and announcements. Built as a full-stack web application, it serves as a one-stop solution for students to stay organized and connected with their academic environment.
 
 ## User Preferences
 Preferred communication style: Simple, everyday language.
